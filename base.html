@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {% block title %}
+        Tru Projects
+        {% endblock %}
+    </title>
+
+    <link
+        rel="icon"
+        href="{{ url_for('static', filename='favicon.svg') }}"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <div class="container">
+
+        <div class="top-contact">
+
+            <span>
+                📞 +91-9676190678
+            </span>
+
+            <span>
+                ✉ manojgitam222@gmail.com
+            </span>
+
+        </div>
+
+
+        <div class="social-icons">
+
+            <a href="#">
+                Facebook
+            </a>
+
+            <a href="#">
+                X
+            </a>
+
+            <a href="#">
+                LinkedIn
+            </a>
+
+            <a href="#">
+                YouTube
+            </a>
+
+            <a href="#">
+                Instagram
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<header class="header">
+
+    <div class="container nav-wrap">
+
+        <!-- LOGO -->
+
+        <a href="{{ url_for('home') }}" class="brand">
+
+            <div class="brand-mark">
+                T
+            </div>
+
+            <div class="brand-text">
+
+                <strong>Tru</strong>
+                <b>Projects</b>
+
+                <small>
+                    Find Your Dream Projects
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <ul class="nav-menu" id="navMenu">
+
+            <li>
+                <a href="{{ url_for('home') }}">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('about') }}">
+                    About Us
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('projects') }}">
+                    B.Tech / M.Tech Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('research') }}">
+                    Research Paper Writing
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('documents') }}">
+                    Document Writing
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('internships') }}">
+                    Summer Internships
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('contact') }}">
+                    Contact Us
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="{{ url_for('register') }}"
+                    class="register-btn"
+                >
+                    Register Now
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <div
+            class="menu-toggle"
+            id="menuToggle"
+        >
+            ☰
+        </div>
+
+    </div>
+
+</header>
+
+<!-- =====================================================
+     FLASH MESSAGES
+===================================================== -->
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+
+    {% if messages %}
+
+        <div class="container" style="padding-top:20px;">
+
+            {% for category, message in messages %}
+
+                <div class="flash-message {{ category }}">
+
+                    {{ message }}
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    {% endif %}
+
+{% endwith %}
+
+
+
+<!-- =====================================================
+     PAGE CONTENT
+===================================================== -->
+
+{% block content %}
+
+{% endblock %}
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <!-- ABOUT -->
+
+        <div>
+
+            <h3>
+
+                <span style="color:#ed1b5b">
+                    Tru
+                </span>
+
+                Projects
+
+            </h3>
+
+
+            <p>
+
+                Customized academic B.Tech and M.Tech
+                projects, research support, documentation
+                and internships for students.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- QUICK LINKS -->
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <ul>
+
+                <li>
+
+                    <a href="{{ url_for('home') }}">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="{{ url_for('about') }}">
+                        About
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="{{ url_for('projects') }}">
+                        Projects
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="{{ url_for('contact') }}">
+                        Contact
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- SERVICES -->
+
+        <div>
+
+            <h3>
+                Services
+            </h3>
+
+
+            <ul>
+
+                <li>
+
+                    <a href="{{ url_for('projects') }}">
+                        Project Development
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="{{ url_for('research') }}">
+                        Research Writing
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="{{ url_for('documents') }}">
+                        Documentation
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="{{ url_for('internships') }}">
+                        Internships
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+
+            <p>
+                📞 +91-9676190678
+            </p>
+
+
+            <p>
+                ✉ manojgitam222@gmail.com
+            </p>
+
+
+            <p>
+                Hyderabad, India
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- COPYRIGHT -->
+
+    <div class="container footer-bottom">
+
+        ©
+
+        <span id="currentYear"></span>
+
+        Tru Projects.
+
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FLOATING BUTTONS
+===================================================== -->
+
+<div class="floating-buttons">
+
+
+    <!-- WHATSAPP -->
+
+    <a
+        class="float-btn whatsapp"
+        href="https://wa.me/919676190678"
+        target="_blank"
+        title="Chat on WhatsApp"
+    >
+
+        W
+
+    </a>
+
+
+
+    <!-- PHONE -->
+
+    <a
+        class="float-btn call"
+        href="tel:+919676190678"
+        title="Call Us"
+    >
+
+        ☎
+
+    </a>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+
+</body>
+
+</html>

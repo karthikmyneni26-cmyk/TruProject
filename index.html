@@ -1,0 +1,1562 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Tru Projects | B.Tech & M.Tech Projects
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                B.Tech & M.Tech Project Solutions
+            </span>
+
+            <h1>
+                Build Your
+                <span>Dream Project</span>
+                With Tru Projects
+            </h1>
+
+            <p>
+                Customized B.Tech and M.Tech academic projects
+                with complete implementation, source code,
+                documentation, research support and internships.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    class="btn btn-pink"
+                    href="{{ url_for('register') }}"
+                >
+                    Register Now
+                </a>
+
+                <a
+                    class="btn btn-dark"
+                    href="{{ url_for('projects') }}"
+                >
+                    Explore Projects
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <div style="font-size:180px;">
+                💻
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATISTICS SECTION
+===================================================== -->
+
+<section class="section section-light">
+
+    <div class="container">
+
+        <div class="card-grid">
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    500+
+                </h3>
+
+                <p>
+                    Student Projects
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    50+
+                </h3>
+
+                <p>
+                    Technology Domains
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📄
+                </div>
+
+                <h3>
+                    100+
+                </h3>
+
+                <p>
+                    Research Projects
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    95%
+                </h3>
+
+                <p>
+                    Student Satisfaction
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES SECTION
+===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <span class="tag">
+                What We Offer
+            </span>
+
+            <h2>
+                Our
+                <span>Services</span>
+            </h2>
+
+            <p>
+                Everything you need to complete and present
+                your academic project successfully.
+            </p>
+
+        </div>
+
+
+
+        <div class="card-grid">
+
+
+            <!-- AI ML -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI & Machine Learning
+                </h3>
+
+                <p>
+                    Industry-oriented AI, Machine Learning,
+                    Deep Learning, NLP and Computer Vision
+                    projects with source code and implementation.
+                </p>
+
+                <br>
+
+                <a
+                    href="{{ url_for('projects') }}"
+                    class="btn btn-pink"
+                >
+                    View Projects
+                </a>
+
+            </div>
+
+
+
+            <!-- WEB -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    Modern full-stack web applications using
+                    Python, Flask, FastAPI, PHP, React,
+                    JavaScript and databases.
+                </p>
+
+                <br>
+
+                <a
+                    href="{{ url_for('projects') }}"
+                    class="btn btn-pink"
+                >
+                    View Projects
+                </a>
+
+            </div>
+
+
+
+            <!-- DATA SCIENCE -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Data Science
+                </h3>
+
+                <p>
+                    Data analytics, visualization, predictive
+                    modeling, Power BI and machine learning
+                    based academic projects.
+                </p>
+
+                <br>
+
+                <a
+                    href="{{ url_for('projects') }}"
+                    class="btn btn-pink"
+                >
+                    View Projects
+                </a>
+
+            </div>
+
+
+
+            <!-- CYBER SECURITY -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🔐
+                </div>
+
+                <h3>
+                    Cyber Security
+                </h3>
+
+                <p>
+                    Phishing detection, malicious URL detection,
+                    network security and cybersecurity
+                    project solutions.
+                </p>
+
+                <br>
+
+                <a
+                    href="{{ url_for('projects') }}"
+                    class="btn btn-pink"
+                >
+                    View Projects
+                </a>
+
+            </div>
+
+
+
+            <!-- IOT -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📡
+                </div>
+
+                <h3>
+                    IoT Projects
+                </h3>
+
+                <p>
+                    Smart IoT, embedded systems, sensors,
+                    automation and cloud-connected
+                    academic projects.
+                </p>
+
+                <br>
+
+                <a
+                    href="{{ url_for('projects') }}"
+                    class="btn btn-pink"
+                >
+                    View Projects
+                </a>
+
+            </div>
+
+
+
+            <!-- DOCUMENTATION -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📄
+                </div>
+
+                <h3>
+                    Research & Documentation
+                </h3>
+
+                <p>
+                    Research paper writing, IEEE formatting,
+                    project reports, PPTs, diagrams and
+                    complete documentation.
+                </p>
+
+                <br>
+
+                <a
+                    href="{{ url_for('research') }}"
+                    class="btn btn-pink"
+                >
+                    Learn More
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECT DOMAINS
+===================================================== -->
+
+<section class="section section-light">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <span class="tag">
+                Explore Our Domains
+            </span>
+
+            <h2>
+                Popular
+                <span>Project Domains</span>
+            </h2>
+
+            <p>
+                Choose the right technology domain
+                for your final-year or academic project.
+            </p>
+
+        </div>
+
+
+
+        <div class="card-grid">
+
+
+            <div class="card">
+
+                <h3>
+                    Artificial Intelligence
+                </h3>
+
+                <p>
+                    AI prediction systems, intelligent
+                    automation and AI-powered applications.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Machine Learning
+                </h3>
+
+                <p>
+                    Classification, regression, clustering
+                    and predictive analytics projects.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Deep Learning
+                </h3>
+
+                <p>
+                    CNN, RNN, LSTM, GRU, Transformers
+                    and advanced neural network projects.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Natural Language Processing
+                </h3>
+
+                <p>
+                    Sentiment analysis, text classification,
+                    chatbots and NLP applications.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Computer Vision
+                </h3>
+
+                <p>
+                    Image classification, object detection,
+                    face recognition and video analytics.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Cloud Computing
+                </h3>
+
+                <p>
+                    Cloud applications, deployment,
+                    AWS, Docker and scalable systems.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURED PROJECTS
+===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <span class="tag">
+                Featured Work
+            </span>
+
+            <h2>
+                Popular
+                <span>Projects</span>
+            </h2>
+
+            <p>
+                Explore some of our popular project categories.
+            </p>
+
+        </div>
+
+
+
+        <div class="project-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div
+                    style="
+                    height:180px;
+                    background:#ffe5ee;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:80px;
+                    "
+                >
+                    🧠
+                </div>
+
+
+                <div class="project-card-content">
+
+                    <span class="tag">
+                        AI / ML
+                    </span>
+
+                    <h3>
+                        Healthcare Prediction System
+                    </h3>
+
+                    <p>
+                        Machine learning based healthcare
+                        prediction and risk assessment system.
+                    </p>
+
+                    <br>
+
+                    <a
+                        href="{{ url_for('register') }}"
+                        class="btn btn-pink"
+                    >
+                        Get Project
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div
+                    style="
+                    height:180px;
+                    background:#e9f4ff;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:80px;
+                    "
+                >
+                    🔗
+                </div>
+
+
+                <div class="project-card-content">
+
+                    <span class="tag">
+                        Cyber Security
+                    </span>
+
+                    <h3>
+                        Malicious URL Detection
+                    </h3>
+
+                    <p>
+                        Machine learning and deep learning
+                        based malicious URL detection system.
+                    </p>
+
+                    <br>
+
+                    <a
+                        href="{{ url_for('register') }}"
+                        class="btn btn-pink"
+                    >
+                        Get Project
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <div
+                    style="
+                    height:180px;
+                    background:#eafff0;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:80px;
+                    "
+                >
+                    📊
+                </div>
+
+
+                <div class="project-card-content">
+
+                    <span class="tag">
+                        Data Science
+                    </span>
+
+                    <h3>
+                        Business Analytics Dashboard
+                    </h3>
+
+                    <p>
+                        Data analytics and visualization
+                        dashboard for business intelligence.
+                    </p>
+
+                    <br>
+
+                    <a
+                        href="{{ url_for('register') }}"
+                        class="btn btn-pink"
+                    >
+                        Get Project
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <br><br>
+
+
+        <div style="text-align:center;">
+
+            <a
+                href="{{ url_for('projects') }}"
+                class="btn btn-dark"
+            >
+                View All Projects
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY CHOOSE US
+===================================================== -->
+
+<section class="section section-light">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <span class="tag">
+                Why Tru Projects?
+            </span>
+
+            <h2>
+                Why Choose
+                <span>Tru Projects?</span>
+            </h2>
+
+        </div>
+
+
+
+        <div class="card-grid">
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    On-Time Delivery
+                </h3>
+
+                <p>
+                    Projects delivered according to
+                    your academic deadlines and review schedules.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Complete Documentation
+                </h3>
+
+                <p>
+                    Project report, PPT, diagrams,
+                    architecture and supporting documents.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Complete Source Code
+                </h3>
+
+                <p>
+                    Get complete project source code
+                    with setup instructions.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    👨‍🏫
+                </div>
+
+                <h3>
+                    Project Guidance
+                </h3>
+
+                <p>
+                    Get guidance to understand your
+                    project implementation and workflow.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🎤
+                </div>
+
+                <h3>
+                    Viva Support
+                </h3>
+
+                <p>
+                    Prepare for project demonstrations,
+                    reviews and final viva presentations.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Online Support
+                </h3>
+
+                <p>
+                    Connect with our team online for
+                    project discussions and technical support.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <span class="tag">
+                Simple Process
+            </span>
+
+            <h2>
+                How It
+                <span>Works</span>
+            </h2>
+
+        </div>
+
+
+
+        <div class="card-grid">
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    1
+                </div>
+
+                <h3>
+                    Register Your Requirement
+                </h3>
+
+                <p>
+                    Submit your project details
+                    through our registration form.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    2
+                </div>
+
+                <h3>
+                    Discuss Your Project
+                </h3>
+
+                <p>
+                    Our team will contact you and
+                    understand your project requirements.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    3
+                </div>
+
+                <h3>
+                    Project Development
+                </h3>
+
+                <p>
+                    Our team develops and prepares
+                    your project according to requirements.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    4
+                </div>
+
+                <h3>
+                    Delivery & Support
+                </h3>
+
+                <p>
+                    Receive your project, documentation
+                    and required technical support.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTERNSHIP SECTION
+===================================================== -->
+
+<section class="section section-light">
+
+    <div class="container about-grid">
+
+
+        <div class="about-content">
+
+            <span class="tag">
+                Learn & Build
+            </span>
+
+            <h2>
+                Join Our
+                <span>Summer Internship</span>
+                Program
+            </h2>
+
+            <p>
+                Gain practical experience by working
+                on real-world projects and learning
+                modern technologies.
+            </p>
+
+            <p>
+                Choose from AI, Machine Learning,
+                Python, Full Stack Development,
+                Data Analytics and more.
+            </p>
+
+            <a
+                href="{{ url_for('internships') }}"
+                class="btn btn-pink"
+            >
+                Explore Internships
+            </a>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <div style="font-size:180px;">
+                🚀
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RESEARCH PAPER SECTION
+===================================================== -->
+
+<section class="section">
+
+    <div class="container about-grid">
+
+
+        <div class="hero-image">
+
+            <div style="font-size:180px;">
+                📄
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="tag">
+                Research Support
+            </span>
+
+            <h2>
+                Research Paper
+                <span>Writing & Publishing</span>
+            </h2>
+
+            <p>
+                Need help with your research paper?
+                We provide support for research documentation,
+                IEEE formatting, project methodology and
+                technical writing.
+            </p>
+
+            <a
+                href="{{ url_for('research') }}"
+                class="btn btn-pink"
+            >
+                Explore Research Services
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TESTIMONIALS
+===================================================== -->
+
+<section class="section section-light">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <span class="tag">
+                Student Feedback
+            </span>
+
+            <h2>
+                What Students
+                <span>Say</span>
+            </h2>
+
+        </div>
+
+
+
+        <div class="card-grid">
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⭐
+                </div>
+
+                <p>
+                    "The project development support was
+                    very helpful. I was able to understand
+                    my project and successfully present it."
+                </p>
+
+                <br>
+
+                <h3>
+                    — B.Tech Student
+                </h3>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⭐
+                </div>
+
+                <p>
+                    "I received complete source code,
+                    documentation and presentation support
+                    for my final-year project."
+                </p>
+
+                <br>
+
+                <h3>
+                    — M.Tech Student
+                </h3>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⭐
+                </div>
+
+                <p>
+                    "The team helped me with my AI and
+                    Machine Learning project and guided me
+                    during the implementation."
+                </p>
+
+                <br>
+
+                <h3>
+                    — AI/ML Student
+                </h3>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ SECTION
+===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <span class="tag">
+                Frequently Asked Questions
+            </span>
+
+            <h2>
+                Frequently Asked
+                <span>Questions</span>
+            </h2>
+
+        </div>
+
+
+
+        <div class="card-grid">
+
+
+            <div class="card">
+
+                <h3>
+                    Do you provide complete source code?
+                </h3>
+
+                <p>
+                    Yes. Project source code and
+                    setup instructions can be provided
+                    according to the selected project.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Can I customize a project?
+                </h3>
+
+                <p>
+                    Yes. Projects can be customized
+                    according to your requirements,
+                    college guidelines and technology stack.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Do you provide project documentation?
+                </h3>
+
+                <p>
+                    Yes. We provide support for project
+                    reports, PPTs, diagrams and technical
+                    documentation.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Do you provide internships?
+                </h3>
+
+                <p>
+                    Yes. We offer project-based internship
+                    programs in AI, ML, Python, Data Analytics,
+                    Web Development and other technologies.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CALL TO ACTION
+===================================================== -->
+
+<section class="section section-light">
+
+    <div class="container">
+
+        <div
+            style="
+            text-align:center;
+            max-width:800px;
+            margin:auto;
+            "
+        >
+
+            <span class="tag">
+                Start Your Project Today
+            </span>
+
+            <h2 style="font-size:40px;margin-bottom:20px;">
+
+                Ready to Build Your
+                <span style="color:#ed1b5b;">
+                    Dream Project?
+                </span>
+
+            </h2>
+
+            <p style="color:#666;margin-bottom:30px;">
+
+                Register your project requirement
+                and our team will contact you to discuss
+                the best solution for your academic project.
+
+            </p>
+
+
+            <div class="hero-buttons"
+                 style="justify-content:center;">
+
+                <a
+                    href="{{ url_for('register') }}"
+                    class="btn btn-pink"
+                >
+                    Register Now
+                </a>
+
+
+                <a
+                    href="{{ url_for('contact') }}"
+                    class="btn btn-dark"
+                >
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT SECTION
+===================================================== -->
+
+<section class="section">
+
+    <div class="container contact-grid">
+
+
+        <div class="contact-info">
+
+            <h2>
+                Let's Build Something
+                Amazing Together
+            </h2>
+
+
+            <div class="contact-item">
+
+                <strong>
+                    Phone
+                </strong>
+
+                <span>
+                    +91-9676190678
+                </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>
+                    Email
+                </strong>
+
+                <span>
+                    manojgitam222@gmail.com
+                </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>
+                    Services
+                </strong>
+
+                <span>
+                    B.Tech / M.Tech Projects,
+                    Research Papers, Documentation
+                    and Internships.
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="form-card">
+
+            <h2 style="margin-bottom:25px;">
+
+                Send Us Your Requirement
+
+            </h2>
+
+
+            <form
+                method="POST"
+                action="{{ url_for('contact') }}"
+            >
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone *
+                        </label>
+
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Enter phone number"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Email *
+                        </label>
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter email address"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Service
+                        </label>
+
+                        <select name="service">
+
+                            <option>
+                                B.Tech / M.Tech Project
+                            </option>
+
+                            <option>
+                                AI / Machine Learning
+                            </option>
+
+                            <option>
+                                Web Development
+                            </option>
+
+                            <option>
+                                Data Science
+                            </option>
+
+                            <option>
+                                Cyber Security
+                            </option>
+
+                            <option>
+                                Research Paper
+                            </option>
+
+                            <option>
+                                Documentation
+                            </option>
+
+                            <option>
+                                Internship
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Message *
+                        </label>
+
+                        <textarea
+                            name="message"
+                            placeholder="Describe your project requirement..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <div class="form-group full">
+
+                        <button
+                            type="submit"
+                            class="btn btn-pink"
+                        >
+                            Submit Requirement
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+{% endblock %}

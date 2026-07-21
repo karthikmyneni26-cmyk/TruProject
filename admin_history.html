@@ -1,0 +1,659 @@
+{% extends "base.html" %}
+
+{% block title %}
+Tru Projects | History & Analytics
+{% endblock %}
+
+
+{% block content %}
+
+<section class="section section-light">
+
+<div class="container">
+
+
+    <!-- PAGE HEADER -->
+
+    <div class="section-title">
+
+        <span class="tag">
+            Admin Dashboard
+        </span>
+
+        <h2>
+            Registration &
+            <span>Feedback History</span>
+        </h2>
+
+        <p>
+            Monitor registrations, customer ratings,
+            feedback and areas for business growth.
+        </p>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         STATISTICS
+    ================================================== -->
+
+    <div class="card-grid">
+
+
+        <!-- TOTAL USERS -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                👥
+            </div>
+
+            <h3>
+                {{ total_users }}
+            </h3>
+
+            <p>
+                Total Registered Users
+            </p>
+
+        </div>
+
+
+
+        <!-- AVERAGE RATING -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                ⭐
+            </div>
+
+            <h3>
+                {{ average_rating }}/5
+            </h3>
+
+            <p>
+                Average User Rating
+            </p>
+
+        </div>
+
+
+
+        <!-- TOTAL FEEDBACK -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                💬
+            </div>
+
+            <h3>
+                {{ total_feedback }}
+            </h3>
+
+            <p>
+                Total Feedback Received
+            </p>
+
+        </div>
+
+
+
+        <!-- GROWTH -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                📈
+            </div>
+
+            <h3>
+                Growth
+            </h3>
+
+            <p>
+                Monitor feedback to improve services.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <br><br>
+
+
+
+    <!-- ==================================================
+         RATING DISTRIBUTION
+    ================================================== -->
+
+    <div class="form-card">
+
+        <h2>
+            Rating Overview
+        </h2>
+
+        <p style="color:#666;margin-bottom:25px;">
+
+            Understand how users rate the services
+            provided by Tru Projects.
+
+        </p>
+
+
+        {% for item in rating_distribution %}
+
+        <div style="margin-bottom:20px;">
+
+            <div style="
+                display:flex;
+                justify-content:space-between;
+                margin-bottom:5px;
+            ">
+
+                <strong>
+                    {{ item.rating }} ⭐
+                </strong>
+
+                <span>
+                    {{ item.count }} Users
+                </span>
+
+            </div>
+
+
+            <div style="
+                background:#eee;
+                height:12px;
+                border-radius:10px;
+                overflow:hidden;
+            ">
+
+                <div style="
+                    width:
+                    {% if total_feedback > 0 %}
+                        {{ (item.count / total_feedback * 100)|round }}%
+                    {% else %}
+                        0%
+                    {% endif %};
+
+                    height:100%;
+                    background:#ed1b5b;
+                    border-radius:10px;
+                "></div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+
+
+    <br><br>
+
+
+
+    <!-- ==================================================
+         USER RATINGS
+    ================================================== -->
+
+    <div class="form-card">
+
+        <h2>
+            User Ratings & Reviews
+        </h2>
+
+        <p style="color:#666;margin-bottom:25px;">
+
+            Ratings and feedback submitted by users.
+
+        </p>
+
+
+        {% if user_ratings %}
+
+        <div style="overflow-x:auto;">
+
+        <table style="
+            width:100%;
+            border-collapse:collapse;
+        ">
+
+            <thead>
+
+                <tr style="
+                    background:#111;
+                    color:white;
+                ">
+
+                    <th style="padding:15px;">
+                        User
+                    </th>
+
+                    <th style="padding:15px;">
+                        Email
+                    </th>
+
+                    <th style="padding:15px;">
+                        Rating
+                    </th>
+
+                    <th style="padding:15px;">
+                        Feedback
+                    </th>
+
+                    <th style="padding:15px;">
+                        Date
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+            {% for review in user_ratings %}
+
+                <tr style="
+                    border-bottom:1px solid #ddd;
+                ">
+
+                    <td style="padding:15px;">
+                        {{ review.name }}
+                    </td>
+
+                    <td style="padding:15px;">
+                        {{ review.email }}
+                    </td>
+
+                    <td style="
+                        padding:15px;
+                        color:#ed1b5b;
+                        font-weight:bold;
+                    ">
+
+                        {{ review.rating }} ⭐
+
+                    </td>
+
+                    <td style="padding:15px;">
+
+                        {{ review.comment or "No comment" }}
+
+                    </td>
+
+                    <td style="padding:15px;">
+
+                        {{ review.created_at }}
+
+                    </td>
+
+                </tr>
+
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+
+        </div>
+
+        {% else %}
+
+        <p>
+            No user ratings available yet.
+        </p>
+
+        {% endif %}
+
+    </div>
+
+
+
+    <br><br>
+
+
+
+    <!-- ==================================================
+         RECENT REGISTRATIONS
+    ================================================== -->
+
+    <div class="form-card">
+
+        <h2>
+            Recent Registrations
+        </h2>
+
+        <p style="color:#666;margin-bottom:25px;">
+
+            Recently registered students and customers.
+
+        </p>
+
+
+        <div style="overflow-x:auto;">
+
+        <table style="
+            width:100%;
+            border-collapse:collapse;
+        ">
+
+            <thead>
+
+                <tr style="
+                    background:#111;
+                    color:#fff;
+                ">
+
+                    <th style="padding:15px;">
+                        Name
+                    </th>
+
+                    <th style="padding:15px;">
+                        Email
+                    </th>
+
+                    <th style="padding:15px;">
+                        Phone
+                    </th>
+
+                    <th style="padding:15px;">
+                        Service
+                    </th>
+
+                    <th style="padding:15px;">
+                        Registered Date
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+            {% for user in recent_users %}
+
+                <tr style="
+                    border-bottom:1px solid #ddd;
+                ">
+
+                    <td style="padding:15px;">
+                        {{ user.name }}
+                    </td>
+
+                    <td style="padding:15px;">
+                        {{ user.email }}
+                    </td>
+
+                    <td style="padding:15px;">
+                        {{ user.phone }}
+                    </td>
+
+                    <td style="padding:15px;">
+                        {{ user.service }}
+                    </td>
+
+                    <td style="padding:15px;">
+                        {{ user.created_at }}
+                    </td>
+
+                </tr>
+
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+
+        </div>
+
+    </div>
+
+
+
+    <br><br>
+
+
+
+    <!-- ==================================================
+         IMPROVEMENT AREAS
+    ================================================== -->
+
+    <div class="section-title">
+
+        <h2>
+            Growth &
+            <span>Improvement Areas</span>
+        </h2>
+
+        <p>
+            Recommended areas to focus on based on
+            registration and feedback data.
+        </p>
+
+    </div>
+
+
+
+    <div class="card-grid">
+
+
+        <!-- IMPROVEMENT 1 -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                ⭐
+            </div>
+
+            <h3>
+                Improve Customer Satisfaction
+            </h3>
+
+            <p>
+                Monitor ratings below 3 stars and
+                contact users to understand their
+                problems and expectations.
+            </p>
+
+        </div>
+
+
+
+        <!-- IMPROVEMENT 2 -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Faster Project Delivery
+            </h3>
+
+            <p>
+                Reduce project delivery time and
+                provide regular progress updates
+                to students.
+            </p>
+
+        </div>
+
+
+
+        <!-- IMPROVEMENT 3 -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                    📱
+            </div>
+
+            <h3>
+                Improve Online Presence
+            </h3>
+
+            <p>
+                Promote projects through Instagram,
+                LinkedIn, YouTube and WhatsApp.
+            </p>
+
+        </div>
+
+
+
+        <!-- IMPROVEMENT 4 -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                🎓
+            </div>
+
+            <h3>
+                Increase Student Registrations
+            </h3>
+
+            <p>
+                Offer student-friendly packages,
+                project demos and internship programs.
+            </p>
+
+        </div>
+
+
+
+        <!-- IMPROVEMENT 5 -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                💬
+            </div>
+
+            <h3>
+                Collect More Feedback
+            </h3>
+
+            <p>
+                Ask every completed-project customer
+                to provide a rating and feedback.
+            </p>
+
+        </div>
+
+
+
+        <!-- IMPROVEMENT 6 -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                🚀
+            </div>
+
+            <h3>
+                Expand Technology Domains
+            </h3>
+
+            <p>
+                Add trending domains such as
+                Generative AI, LLMs, Cloud,
+                Cybersecurity and IoT.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <br><br>
+
+
+
+    <!-- ==================================================
+         GROWTH PLAN
+    ================================================== -->
+
+    <div class="contact-info">
+
+        <h2>
+            Recommended Growth Strategy
+        </h2>
+
+        <br>
+
+
+        <p>
+
+            <strong>1. Track registrations:</strong>
+            Identify which months and services
+            generate the most enquiries.
+
+        </p>
+
+        <br>
+
+
+        <p>
+
+            <strong>2. Improve low ratings:</strong>
+            Analyze every rating below 3 stars
+            and identify recurring complaints.
+
+        </p>
+
+        <br>
+
+
+        <p>
+
+            <strong>3. Promote successful projects:</strong>
+            Use student testimonials and successful
+            project demonstrations to attract new users.
+
+        </p>
+
+        <br>
+
+
+        <p>
+
+            <strong>4. Focus on popular domains:</strong>
+            Identify which services receive the highest
+            number of registrations and prioritize them.
+
+        </p>
+
+        <br>
+
+
+        <p>
+
+            <strong>5. Increase repeat customers:</strong>
+            Offer internships, advanced projects,
+            research paper support and additional services.
+
+        </p>
+
+    </div>
+
+
+</div>
+
+</section>
+
+{% endblock %}

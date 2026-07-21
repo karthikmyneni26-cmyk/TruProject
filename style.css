@@ -1,0 +1,871 @@
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202020;
+    background: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.top-bar {
+    background: #050505;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-contact,
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a:hover {
+    color: #ed1b5b;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.nav-wrap {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.brand-mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ed1b5b, #ff3e68);
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-text {
+    white-space: nowrap;
+}
+
+.brand strong {
+    color: #ed1b5b;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.brand b {
+    color: #111;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.brand small {
+    display: block;
+    color: #ed1b5b;
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.nav-menu li {
+    white-space: nowrap;
+}
+
+.nav-menu a {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.nav-menu a:hover {
+    color: #ed1b5b;
+}
+
+
+/* =========================================
+   REGISTER BUTTON
+========================================= */
+
+.register-btn {
+    background: #ed1b5b;
+    color: #fff !important;
+    padding: 12px 20px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.register-btn:hover {
+    background: #c9164d;
+    color: #fff !important;
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .nav-wrap {
+        gap: 15px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    .brand strong,
+    .brand b {
+        font-size: 25px;
+    }
+
+}
+
+
+@media (max-width: 992px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        white-space: normal;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-menu a {
+        white-space: normal;
+        padding: 10px 0;
+    }
+
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero {
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+        120deg,
+        #f8f8fa,
+        #fff
+    );
+}
+
+.hero-grid,
+.about-grid,
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span,
+.section-title span,
+.about-content h2 span {
+    color: #ed1b5b;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-pink {
+    background: #ed1b5b;
+    color: #fff;
+}
+
+.btn-pink:hover {
+    background: #c9164d;
+}
+
+.btn-dark {
+    background: #111;
+    color: #fff;
+}
+
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
+.hero-image {
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+.section {
+    padding: 80px 0;
+}
+
+.section-light {
+    background: #f7f7f9;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #666;
+    max-width: 700px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   CARD GRID
+===================================================== */
+
+.card-grid,
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card,
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.card {
+    padding: 30px;
+}
+
+.card:hover,
+.project-card:hover {
+    transform: translateY(-7px);
+}
+
+
+/* =====================================================
+   CARD ICON
+===================================================== */
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    background: #ffe7ef;
+    color: #ed1b5b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p,
+.project-card p,
+.about-content p {
+    color: #666;
+}
+
+
+/* =====================================================
+   PROJECT CARDS
+===================================================== */
+
+.project-card {
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-card-content {
+    padding: 25px;
+}
+
+
+/* =====================================================
+   PROJECT TAG
+===================================================== */
+
+.tag {
+    display: inline-block;
+
+    background: #ffe5ee;
+    color: #ed1b5b;
+
+    padding: 5px 12px;
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   ABOUT SECTION
+===================================================== */
+
+.about-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   FORM WRAPPER
+===================================================== */
+
+.form-wrapper {
+    max-width: 850px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   FORM CARD
+===================================================== */
+
+.form-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =====================================================
+   FORM GRID
+===================================================== */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* =====================================================
+   FORM GROUP
+===================================================== */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   FORM INPUTS
+===================================================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    font-size: 15px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #ed1b5b;
+}
+
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+
+/* =====================================================
+   CONTACT INFO
+===================================================== */
+
+.contact-info {
+    background: #111;
+    color: #fff;
+
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact-info h2 {
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-item strong {
+    display: block;
+    color: #ed1b5b;
+    margin-bottom: 5px;
+}
+
+
+/* =====================================================
+   FLASH MESSAGES
+===================================================== */
+
+.flash-message {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.flash-message.success {
+    background: #e8f8ee;
+    color: #16803c;
+}
+
+.flash-message.error {
+    background: #ffe9ed;
+    color: #d61f45;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background: #080808;
+    color: #fff;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer h3 {
+    margin-bottom: 20px;
+}
+
+.footer p,
+.footer a {
+    color: #aaa;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li {
+    margin-bottom: 10px;
+}
+
+.footer a:hover {
+    color: #ed1b5b;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+
+    border-top: 1px solid #333;
+
+    text-align: center;
+    color: #aaa;
+}
+
+
+/* =====================================================
+   FLOATING BUTTONS
+===================================================== */
+
+.floating-buttons {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    z-index: 999;
+}
+
+.float-btn {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-size: 20px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.call {
+    background: #ed1b5b;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .nav-menu {
+        gap: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .card-grid,
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .top-bar .container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        background: #fff;
+
+        flex-direction: column;
+
+        padding: 25px;
+
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .card-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .form-card {
+        padding: 25px;
+    }
+
+    .brand strong,
+    .brand b {
+        font-size: 25px;
+    }
+
+}
